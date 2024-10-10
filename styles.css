@@ -1,0 +1,166 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #120323;
+  
+}
+
+header img {
+  width: 100px;
+  height: auto;
+}
+
+header h1 {
+  margin-left: 20px;
+  font-size: 25px;
+  color:#97bf04;
+}
+
+header h2 {
+ color:#120323;
+}
+
+aside {
+ background-color:#97bf04;
+ margin-bottom: 5px;
+ flex: 1;
+ padding-left: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  color: white;
+  background-color: #d9043d;
+  margin-bottom: 5px;
+}
+
+img {
+  border: 5px solid #d9043d;
+}
+
+figcaption {
+  padding: 15px;
+}
+
+#container {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+}
+
+/* centering the image and making it 100% width */
+figure {
+  display: flex; 
+  align-items: center; 
+}
+
+@media (max-width: 1000px) {
+    /* keeping the logo and company name on the same line and in the center*/
+    header {
+      flex-direction: row;
+      justify-content: center; 
+      align-items: center;
+    } 
+
+    /* puffin and text aligned next to eachother */
+  figure {
+    display: flex;
+    align-items: center;
+  }
+
+  figcaption {
+    padding: 15px;
+    display: flex;
+    flex-direction: column; /* Stack caption elements vertically */
+    justify-content: center; /* Center align items */
+  }
+
+  /* sidebar positioning */
+  aside {
+    width: 100%; 
+    margin-top: 20px; 
+  }
+}
+
+/* resize puffin for this meida query */
+figure img {
+  width: 300px; 
+  height: auto; 
+}
+
+/* media query for devices 1000px and higher */
+@media (min-width: 1000px) {
+ header {
+      flex-direction: row;
+      justify-content: center; 
+      align-items: center;
+ }
+
+  #container {
+    /* change to row style */
+    flex-direction: row; 
+    justify-content: space-between; 
+  }
+
+  main {
+    flex: 2; 
+  }
+
+  aside {
+    flex: 1; 
+    width: 300px; 
+  }
+}
+
+@media (max-width: 768px) {
+  /* stacking the logo and company name in the header */
+  header {
+    flex-direction: column; /* stacking the logo and "natures lens" in a column */
+    align-items: center; /* making sure they are in one line horizontally */
+    text-align: center; 
+  }
+
+  header img {
+    margin-bottom: 10px; /* space under the logo */
+  }
+
+  #container {
+    flex-direction: column; 
+    width: 100%; 
+  }
+
+  figure {
+    display: flex; 
+    /* trying to stacking the image and text vertically */
+    flex-direction: column; 
+    /* i think this would center the contents horizontally?  */
+  }
+
+  /* making the puffin 100% */
+  figure img {
+    width: 100%; 
+    height: auto; 
+    margin-bottom: 10px;
+  }
+
+  aside {
+    width: 100%; 
+    margin-top: 20px;
+  }
+}
+
+
+
